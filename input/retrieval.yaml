@@ -1,0 +1,30 @@
+output:
+  out_dir: /home/nannau/inference-module/
+  varmap: { # These are the "CliamtExML" names associated with ERA5 names.
+    "u10": "uas",
+    "v10": "vas",
+    "t2m": "tas",
+    "tp": "pr",
+    "RH": "RH"
+  }
+query:
+  product_type: reanalysis
+  format: netcdf
+  variable:
+    - 10m_u_component_of_wind
+    - 10m_v_component_of_wind
+    - 2m_temperature
+    - 2m_dewpoint_temperature
+    - total_precipitation
+  year: '2024'
+  month:
+    - '05'
+  day:
+    - '17'
+  time:
+    - '00:00'
+  area:
+    - 72.5
+    - -150.92
+    - 46
+    - -83
