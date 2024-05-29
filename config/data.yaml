@@ -1,0 +1,5 @@
+input:
+  lr_topography: input/lr_topography_norm.pt
+  hr_topography: input/hr_topography_norm.pt
+output:
+  out_dir: output/
