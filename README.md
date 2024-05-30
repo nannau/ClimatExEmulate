@@ -61,4 +61,5 @@ python emulate.py start_time="1993-11-03 00:00" end_time="1993-11-03 00:00"
 
 If you want a single time slice, make the `start_time` and `end_time` the same date. This will query ERA5 runs -- so it only supports hourly data for supported dates.
 
-
+# Author
+* Nic Annau, CCCma Environment and Climate Change Canada 
