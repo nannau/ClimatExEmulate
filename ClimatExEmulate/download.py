@@ -1,6 +1,5 @@
 
 from comet_ml import API
-import torch
 import cdsapi
 from omegaconf import OmegaConf
 import logging
