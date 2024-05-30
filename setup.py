@@ -13,6 +13,7 @@ setup(
         "torch",
         "hydra-core",
         "pydantic",
-        "comet-ml"
+        "comet-ml",
+        "metpy"
     ],
 )

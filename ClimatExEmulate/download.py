@@ -23,8 +23,11 @@ def get_era5(cfg) -> None:
             f"{cfg.output.out_dir}/{filename}"
         )
 
-def load_comet_model():
+def load_comet_model(model = "./generator_comet-gan-test-narval-no-sigmoid.pt"):
     api = API() 
-    api.download_registry_model("nannau-uvic", "climatexml-vanilla", version="1.0.0-beta", output_path="./", expand=True, stage=None)
-    G = torch.jit.load("./generator_comet-gan-test-narval-no-sigmoid.pt")
-    return G.float()
+
+    if os.path.exists(model):
+        logging.info(f"❓ Model {model} already exists")
+    else:
+        logging.info(f"⬇️ Downloading model")
+        api.download_registry_model("nannau-uvic", "86-epoch-gan-hr-topo", version="1.0.0", output_path="./", expand=True, stage=None)
