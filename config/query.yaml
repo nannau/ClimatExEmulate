@@ -1,5 +1,5 @@
 start_time: 2023-05-17 00:00:00
-end_time: 2023-05-17 23:00:00
+end_time: 2023-05-17 00:00:00
 
 generator_model_path: ./generator_comet-gan-test-narval-no-sigmoid.pt
 
