@@ -14,6 +14,7 @@ setup(
         "hydra-core",
         "pydantic",
         "comet-ml",
-        "metpy"
+        "metpy",
+        "cdsapi"
     ],
 )

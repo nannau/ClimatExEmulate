@@ -1,7 +1,11 @@
 # ClimatExEmulate
+## Disclaimer
+This is experimental data and not an official data product by any stretch of the imagination. Use with caution!
 
 ## Getting started
+* Please email me, `nannau [at] uvic [dot] ca` to request access to the WRF emulator model. 
 * Register for an account for access to ERA5 data and the Copernicus API: https://cds.climate.copernicus.eu/#!/home
+* Follow instructions here to make API key available for your system: https://cds.climate.copernicus.eu/api-how-to
 * Create an account on comet and set `COMET_API_KEY` environment variable to your account's key: https://www.comet.com/
 
 ## Installation

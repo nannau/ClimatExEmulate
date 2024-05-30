@@ -1,0 +1,38 @@
+# App name, override to match the name your app is known by
+app_name: ClimatExEmulate
+
+# Help header, customize to describe your app to your users
+header: == ${hydra.help.app_name} ==
+
+footer: |-
+  Powered by Hydra (https://hydra.cc)
+  Use --hydra-help to view Hydra specific help
+
+# Basic Hydra flags:
+#   $FLAGS_HELP
+#
+# Config groups, choose one of:
+#   $APP_CONFIG_GROUPS: All config groups that does not start with hydra/.
+#   $HYDRA_CONFIG_GROUPS: All the Hydra config groups (starts with hydra/)
+#
+# Configuration generated with overrides:
+#   $CONFIG : Generated config
+#
+template: |-
+  ${hydra.help.header}
+
+  This is ${hydra.help.app_name}!
+  
+  == COMMAND LINE INTERFACE =='
+  emulate.py will download the ERA5 data for each hour between start_time and end_time and save it locally.
+  It will then run the ML emulation tool on that data after preprocessing it and save it to disc.
+  Required arguments:
+  - start_time (str): The starting time you would like to emulate. Must be in YYYY-MM-DD HH:MM format.
+  - end_time (str): The starting time you would like to emulate. Must be in YYYY-MM-DD HH:MM format.
+
+  For lower level configuration, see the config/ directory.
+  - data.yaml specifies input data file paths
+  - query.yaml specifies the query to be made to the CDS API and Comet for the raw ML model
+  - statistics.yaml specifies the statistics used to preprocess the data (and thus reconstruct the original data)
+
+  ${hydra.help.footer}

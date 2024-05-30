@@ -3,6 +3,7 @@ defaults:
   - data
   - query
   - statistics
+  - override hydra/help: help
   
 hydra:  
   output_subdir: null 
