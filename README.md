@@ -11,10 +11,11 @@ The regridding procedure relies on [xESMF](https://xesmf.readthedocs.io/en/lates
 Make sure you have a conda or miniconda installation on your system, then:
 ```bash
 conda create -n inference_env
+conda activate inference_env
 conda install -c conda-forge xesmf dask netCDF4 pip
 ```
 
-Clone this repo and within the top leve of this repository run
+Clone this repo and within the top level (same directory as `setup.py`) run
 
 ```bash
 pip install e .
@@ -22,12 +23,31 @@ pip install e .
 
 This will install the dependencies using `pip`.
 
-
 ## Usage
-Usage is simple,  you can change configuration settings for more control in the `config` directory, however, it's easy to override with command line options:
+Usage is very simple, you can change configuration settings for more control in the `config` directory, however, it's easy to override with command line options:
 
 ```bash
 python emulate.py --help
+
+== ClimatExEmulate ==
+
+This is ClimatExEmulate!
+
+== COMMAND LINE INTERFACE =='
+emulate.py will download the ERA5 data for each hour between start_time and end_time and save it locally.
+It will then run the ML emulation tool on that data after preprocessing it and save it to disc.
+Required arguments:
+- start_time (str): The starting time you would like to emulate. Must be in YYYY-MM-DD HH:MM format.
+- end_time (str): The starting time you would like to emulate. Must be in YYYY-MM-DD HH:MM format.
+
+For lower level configuration, see the config/ directory.
+- data.yaml specifies input data file paths
+- query.yaml specifies the query to be made to the CDS API and Comet for the raw ML model
+- statistics.yaml specifies the statistics used to preprocess the data (and thus reconstruct the original data)
+
+Powered by Hydra (https://hydra.cc)
+Use --hydra-help to view Hydra specific help
+
 ```
 
 With `start_time` and `end_time` defined in the format `YYYY-MM-DD-hh:MM`, simply:
