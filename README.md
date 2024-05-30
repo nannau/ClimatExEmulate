@@ -10,7 +10,7 @@ The regridding procedure relies on [xESMF](https://xesmf.readthedocs.io/en/lates
 
 Make sure you have a conda or miniconda installation on your system, then:
 ```bash
-conda create -n inference_env`
+conda create -n inference_env
 conda install -c conda-forge xesmf dask netCDF4 pip
 ```
 
