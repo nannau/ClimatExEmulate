@@ -3,10 +3,10 @@ defaults:
   - data
   - query
   - statistics
-  - override hydra/hydra_logging: disabled  
-  - override hydra/job_logging: disabled  
+  # - override hydra/hydra_logging: disabled  
+  # - override hydra/job_logging: disabled 
   
 hydra:  
-  output_subdir: null  
+  output_subdir: null 
   run:  
     dir: .

@@ -1,3 +1,6 @@
+start_time: 2023-05-17 00:00:00
+end_time: 2023-05-17 23:00:00
+
 query:
   product_type: reanalysis
   format: netcdf
